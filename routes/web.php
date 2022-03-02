@@ -38,7 +38,7 @@ Route::get('/', function () {
         ],
     ];
 
-
+    // creo un array per passare l'intero array data
     return view('homepage',["data" => $data]);
 });
 

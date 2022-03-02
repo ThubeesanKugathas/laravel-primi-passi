@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use phpDocumentor\Reflection\PseudoTypes\LowercaseString;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,26 +18,47 @@ Route::get('/', function () {
     $data = [
         [
             "linkName" => "Chi Siamo",
-            "link" => "",
+            "link" => "/chi siamo",
         ],
         [
             "linkName" => "Documentazioni",
-            "link" => "",
+            "link" => "/documentazioni",
         ],
         [
             "linkName" => "Contatti",
-            "link" => "",
+            "link" => "/contatti",
         ],
         [
             "linkName" => "Sponsors",
-            "link" => "",
+            "link" => "/sponsors",
         ],
         [
             "linkName" => "Login",
-            "link" => "",
+            "link" => "/login",
         ],
     ];
 
 
     return view('homepage',["data" => $data]);
 });
+
+Route::get('/chi siamo', function () {
+    return view('chisiamo');
+});
+
+Route::get('/documentazioni', function () {
+    return view('documentazioni');
+});
+
+Route::get('/contatti', function () {
+    return view('contatti');
+});
+
+Route::get('/sponsors', function () {
+    return view('sponsor');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+

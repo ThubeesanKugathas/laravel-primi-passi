@@ -14,5 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        [
+            "linkName" => "Chi Siamo",
+            "link" => "",
+        ],
+        [
+            "linkName" => "Documentazioni",
+            "link" => "",
+        ],
+        [
+            "linkName" => "Contatti",
+            "link" => "",
+        ],
+        [
+            "linkName" => "Sponsors",
+            "link" => "",
+        ],
+        [
+            "linkName" => "Login",
+            "link" => "",
+        ],
+    ];
+
+
+    return view('homepage',["data" => $data]);
 });

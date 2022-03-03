@@ -39,7 +39,7 @@ Route::get('/', function () {
     ];
 
     // creo un array per passare l'intero array data
-    return view('homepage',["data" => $data]);
+    return view('homepage',compact("data"));
 });
 
 Route::get('/chi siamo', function () {
